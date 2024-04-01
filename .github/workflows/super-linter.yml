@@ -20,7 +20,13 @@ jobs:
         with:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
-
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install Dependencies
+        run: pip install -r requirements.text
+        shell: bash       
       - name: Lint Code Base
         uses: github/super-linter@v4
         env:
