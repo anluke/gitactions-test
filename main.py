@@ -2,7 +2,7 @@ def helloWorld():
   print("Hello World")
 
 
-def helloSir();
+def helloSir():
   print("Hello Sir")
 
 
